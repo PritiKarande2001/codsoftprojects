@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Calculator</title>
+     <script src="https://kit.fontawesome.com/40a0d679b0.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <style type="text/css">
+	
+#main{
+    background-color: #a2b6ba;
+    height: 490px;
+    width: 43%;
+    margin-top: 100px;
+
+}
+.main-first{
+    height: 100px;
+    width: 100%;
+}
+.main-first h1{
+    margin-left: 200px;
+}
+.main-second button{
+    height: 50px;
+    width: 100%;
+}
+</style>
+	    <div id="main" style="margin-left: 350px;">
+        <div class="main-first"> 
+            <h1 style="color: white;">CALCULATOR</h1> 
+       </div>
+      
+            <input type="text" id="ans" style="height: 50px; margin-left: 10px; margin-top: -30px; width: 30%;" >
+             
+              <div>
+                <button style="height: 50px; width: 150px; font-size: 18px; margin-left: 5px; margin-top: 20px; background-color: red; color: white;" onclick="cleardisplay()">C</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('%')">%</button>
+                 <button style="height: 50px; width: 150px; font-size: 15px; " onclick="deleteLast()"><i class="fa-solid fa-x"></i></button>
+                <button style="height: 50px; width: 150px; "onclick="display('/')">/</button>
+            </div>
+            <div style="margin-top: 10px;">
+                <button style="height: 50px; width: 150px;font-size: 15px; margin-left: 5px;" onclick="display('7')">7</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('8')">8</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('9')">9</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('*')">*</button>
+            </div>
+            <div style="margin-top: 10px;">
+                <button style="height: 50px; width: 150px; font-size: 15px; margin-left: 5px;" onclick="display('4')">4</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('5')">5</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('6')">6</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('-')">-</button>
+            </div>
+            <div style="margin-top: 10px;">
+                <button style="height: 50px; width: 150px; font-size: 15px; margin-left: 5px;" onclick="display('1')">1</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('2')">2</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('3')">3</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('+')">+</button>
+            </div>
+            <div style="margin-top: 10px;">
+                <button style="height: 50px; width: 150px; font-size: 15px; margin-left: 5px;" onclick="display('^')">^</button>
+                <button style="height: 50px; width: 150px; font-size: 15px;" onclick="display('0')">0</button>
+                <!-- <button style="height: 50px; width: 150px;" onclick="display('0')">.</button> -->
+                <button style="height: 50px; width: 150px; font-size: 22px; background-color:lightgreen; border: 1px solid black; color: red;" onclick="cal()">=</button>
+            </div>
+
+            <script type="text/javascript">
+            	function display(value) 
+            	{
+            		document.getElementById('ans').value += value;
+            	}
+            	function cleardisplay()
+            	{
+            		document.getElementById('ans').value = '';
+            	}
+            	function deleteLast()
+            	{
+            		var del = document.getElementById('ans').value;
+            		document.getElementById('ans').value = del.slice(0, -1);
+            	}
+            	function cal()
+            	{
+            		var exp = document.getElementById('ans').value;
+            		var result = eval(exp);
+            		document.getElementById('ans').value = result;
+            	}
+            </script>
+            
+        
+        
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
